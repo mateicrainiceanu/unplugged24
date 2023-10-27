@@ -11,7 +11,7 @@ public class Muie7 extends LinearOpMode {
     private DcMotor motor;
     private DcMotor motor2;
 
-    private Servo
+//    private Servo servo;
 
 
     /**
@@ -21,6 +21,7 @@ public class Muie7 extends LinearOpMode {
     public void runOpMode() {
         motor2 = hardwareMap.get(DcMotor.class, "motor2");
         motor = hardwareMap.get(DcMotor.class, "motor");
+//        servo = hardwareMap.get(Servo.class, "servo");
 
         // Put initialization blocks here.
         waitForStart();
@@ -29,8 +30,8 @@ public class Muie7 extends LinearOpMode {
             while (opModeIsActive()) {
                 // Put loop blocks here.
                 telemetry.update();
-                motor.setPower(1);
-                motor2.setPower(-1);
+                motor.setPower(0.1);
+                motor2.setPower(-0.1);
             }
         }
     }
